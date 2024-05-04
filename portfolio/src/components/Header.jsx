@@ -2,6 +2,7 @@
 import { NavLink } from 'react-router-dom';
 
 // This will stay consistent throughout the page. When the user clicks on a link it will redirect them to the applicable page
+// The isActive function will help determine what page the user is on using Tannery operator
 export default function Header() {
     return (
         <nav>
