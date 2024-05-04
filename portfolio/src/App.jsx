@@ -9,6 +9,10 @@ import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Footer from './components/Footer'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+
+
 // exporting routes to the main App along with consistent header and footer
 export default function App() {
   return (
