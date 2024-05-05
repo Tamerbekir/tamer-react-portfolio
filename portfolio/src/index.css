@@ -13,54 +13,59 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Styling for header */
 .header {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  width: 100%;
-  background-color: #f8f9fa;  
-  padding: 8px 0;  
-  border-bottom: 1px solid #e0e0e0;  
-  font-size: 17px;
+  border-bottom: 1px solid #000000;
+  font-size: 18px;
   margin-bottom: 20px;
+  padding: 0px 15px;
 }
 
-.header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
 
+/* Styling for nav 'a' tag elements in header */
 .header nav a {
   color: #6634c2; 
   margin: 0 10px;
   padding: 10;
 }
 
-.header nav a:hover {
-  color: #b2a5c9; 
+
+/* Styling for nav element in header */
+.header nav {
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  width: 100%;
 }
 
 /* Color for active link is light blue and bold */
 .header nav a.active {
-  color: #475d8a; 
+  color: #384764; 
   font-weight: bold;
 }
 
+.header nav a:hover {
+  color: #c4bcd2; 
+}
+.header nav a.active:hover {
+  color: #384764; 
+}
 
+/* Name styling */
 .navName {
-  display: flex;
-  margin: 0;
   list-style: none;
+  margin-right: auto; 
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
 }
 
+/* styling when user hoves over links */
 .navName li a:hover {
-  color: #b2a5c9; 
+  color: #c4bcd2; 
 } 
 
+/* Styling for list item (name) 'a' tag elements */
 .navName li a {
   font-weight: bold;
 }
@@ -71,15 +76,18 @@
   width: 50%
 }
 
+/* Styling for 'a' tag elements  */
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
-  color: #53f278;
+
+.navName li {
+  margin-top: 3.5%; /* Ensures no default margin */
 }
 
+/* Styling for main body */
 body {
   margin: 0;
   place-items: center;
@@ -88,10 +96,11 @@ body {
 }
 
 h1 { 
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.1;
 }
 
+/* styling for contact submit button */
 .submitContact {
   font-family: inherit;
   color: white;
@@ -104,27 +113,36 @@ h1 {
   background-color: #6075a0;
 }
 
-
-@media (max-width: 768px) {
-    .header {
-      font-size: 12px;
-    }
-    .navName {
-      font-size: 20px;
-    }
+/* Styling for various screen sizes and what elements change for the different sizes*/
+@media (max-width: 600px) {
+  .header nav {
+    flex-direction: column;
+    align-items: center;
   }
 
-@media (max-width: 480px) {
   .header {
-    font-size: 11px;
+    font-size: 20px;
     padding: 1;
+    justify-content: center;
   }
-  
+
+  .navName {
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 2%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .form-text {
+    font-size: 10px;
+  }
 }
 
-@media (max-width: 360px) {
-  .header {
-    font-size: 9px;
-    padding: 1;
-  }
-}
+
