@@ -31,7 +31,7 @@ export default function Contact() {
                     {/* on blur takes effect when user leaves the email section with any input  */}
                     <input type="text" className="form-control" id="contactInputName" required onBlur={ handleBlur } />
                     {/* display a style of nothing if user does not yet go into the input field to type someone ein */}
-                    <div className="errorName" style={{ display: 'none' }}>
+                    <div className="invalid-feedback" style={{ display: 'none' }}>
                         Please enter a name.
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export default function Contact() {
                     {/* on blur takes effect when user leaves the email section with any input  */}
                     <input type="email" className="form-control" id="contactInputEmail" required onBlur={ handleBlur } />
                     {/* display a style of nothing if user does not yet go into the input field to type someone ein */}
-                    <div className="errorEmail" style={{ display: 'none' }}>
+                    <div className="invalid-feedback" style={{ display: 'none' }}>
                     Please enter an email.
                     </div>
                 </div>

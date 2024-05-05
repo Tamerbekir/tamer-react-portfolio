@@ -40,7 +40,7 @@
 }
 
 /* Color for active link is light blue and bold */
-.header nav a.active {
+.header nav a.active, .header nav a.active:hover {
   color: #384764; 
   font-weight: bold;
 }
@@ -48,9 +48,7 @@
 .header nav a:hover {
   color: #c4bcd2; 
 }
-.header nav a.active:hover {
-  color: #384764; 
-}
+
 
 /* Name styling */
 .navName {
