@@ -1,11 +1,11 @@
 
 //importing images for each prohect
 import projectOne from '../assets/placeholder.jpeg';
-// import porjectTwo from '../assets'
+// import projectTwo from '../assets'
 // import projectThree from '../assets'
 // import projectFour from '../assets'
 // import projectFive from '../assets'
-// import porjectSix from '../assets'
+// import projectSix from '../assets'
 
 
 // Portfolio page, exporting function to main app for rendering

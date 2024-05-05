@@ -1,3 +1,4 @@
+// Exporting Resume function and JSX to be rendered
 export default function Resume() {
     return (
         <div className="text-center resume">

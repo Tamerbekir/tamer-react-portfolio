@@ -1,3 +1,4 @@
+// Exporting About function and JSX to be rendered
 export default function About() {
     return (
         <div className="text-center about">
