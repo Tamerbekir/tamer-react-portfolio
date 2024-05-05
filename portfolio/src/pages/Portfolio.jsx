@@ -1,4 +1,13 @@
 
+//importing images for each prohect
+import projectOne from '../assets/placeholder.jpeg';
+// import porjectTwo from '../assets'
+// import projectThree from '../assets'
+// import projectFour from '../assets'
+// import projectFive from '../assets'
+// import porjectSix from '../assets'
+
+
 // Portfolio page, exporting function to main app for rendering
 // Will display multiple projects
 // Using Bootstrap elements
@@ -9,7 +18,7 @@ export default function Portfolio() {
             <p>This is the portfolio section.</p>
             <div className="card-group">
                 <div className="card m-2">
-                    <img src="../assets/placeholder.jpeg" className="card-img-top" alt="..."></img>
+                <img src={ projectOne } className="card-img-top" alt="Placeholder" />
                     <div className="card-body project-one">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -17,7 +26,7 @@ export default function Portfolio() {
                     </div>
                 </div>
                 <div className="card m-2">
-                    <img src="..." className="card-img-top" alt="..."></img>
+                    <img src={ projectOne } className="card-img-top" alt="..."></img>
                     <div className="card-body project-two">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -25,7 +34,7 @@ export default function Portfolio() {
                     </div>
                 </div>
                 <div className="card m-2">
-                    <img src="..." className="card-img-top" alt="..."></img>
+                    <img src={ projectOne } className="card-img-top" alt="..."></img>
                     <div className="card-body project-three">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -35,7 +44,7 @@ export default function Portfolio() {
             </div>
             <div className="card-group">
                 <div className="card m-2">
-                    <img src="..." className="card-img-top" alt="..."></img>
+                    <img src={ projectOne } className="card-img-top" alt="..."></img>
                     <div className="card-body project-four">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -43,7 +52,7 @@ export default function Portfolio() {
                     </div>
                 </div>
                 <div className="card m-2">
-                    <img src="..." className="card-img-top" alt="..."></img>
+                    <img src={ projectOne } className="card-img-top" alt="..."></img>
                     <div className="card-body project-five">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -51,7 +60,7 @@ export default function Portfolio() {
                     </div>
                 </div>
                 <div className="card m-2">
-                    <img src="..." className="card-img-top" alt="..."></img>
+                    <img src={ projectOne } className="card-img-top" alt="..."></img>
                     <div className="card-body project-six">
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>

@@ -9,14 +9,15 @@ const submitForm = (e) => {
 //however, if there is something within the input field the input will remove the error class and display nothing
 const handleBlur = (e) => {
     if (!e.target.value) { 
+        //adding class 'error' displays red font
         e.target.classList.add('error'); 
+        //adding 'block' as a style makes it visible
         e.target.nextElementSibling.style.display = 'block'; 
     } else {
         e.target.classList.remove('error')
         e.target.nextElementSibling.style.display = 'none'; 
     }
 };
-
 
 // If user does not enter information and hovers away from the input fields they will get a message within the input field
 export default function Contact() {
