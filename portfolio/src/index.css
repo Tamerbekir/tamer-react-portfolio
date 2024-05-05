@@ -13,21 +13,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* index.css */
 .header {
-  background-color: #f8f9fa;  /* Light gray background */
-  padding: 10px 0;  /* Padding on top and bottom */
-  border-bottom: 1px solid #e0e0e0;  /* Bottom border for a subtle line */
+  background-color: #f8f9fa;  
+  padding: 10px 0;  
+  border-bottom: 1px solid #e0e0e0;  
 }
 
 .header nav a {
-  color: #007bff;  /* Blue color for links */
-  margin: 0 10px;  /* Spacing between links */
+  color: #6634c2; 
+  margin: 0 10px;  
 }
 
+/* Color for active link is light blue and bold */
 .header nav a.active {
-  color: #356ddc;  /* Red color for active links */
-  font-weight: bold;  /* Make active link bold */
+  color: #475d8a; 
+  font-weight: bold;
+}
+
+/* contact information for the user to enter  */
+#contactInputName, #contactInputEmail{
+  margin: auto;
+  width: 50%
 }
 
 a {
@@ -47,38 +53,19 @@ body {
 }
 
 h1 { 
-  font-size: 3.2em;
+  font-size: 40px;
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+.submitContact {
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: white;
+  background-color: #6d91da;
+  border-color: #ffffff;
+  font-size: 15px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.submitContact:hover {
+  background-color: #6075a0;
 }
+
