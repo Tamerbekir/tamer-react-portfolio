@@ -1,5 +1,6 @@
 
-function submitForm () {
+const submitForm = (e) => {
+    e.preventDefault();
     alert('This is a work in progress! Please try again later!')
 }
 
