@@ -11,7 +11,7 @@ export default function Contact() {
             <h1>Contact Me</h1>
             <p>This is the Contact me section.</p>
             {/* added onClick function for form */}
-            <form onClick={ submitForm }>
+            <form>
                 <div className="mb-3">
                     <label className="form-label">Name</label>
                     <input type="email" className="form-control" id="contactInputName" />
@@ -22,7 +22,7 @@ export default function Contact() {
                     {/* made changes to bootstrap boiler plate elements such as adjusting Form to div and closing input tag */}
                     <input className="form-control" id="contactInputEmail" />
                 </div>
-                <button type="submit" className="submitContact btn btn-primary m-3">Submit</button>
+                <button onClick={ submitForm } type="submit" className="submitContact btn btn-primary m-3">Submit</button>
             </form>
         </div>
     );
