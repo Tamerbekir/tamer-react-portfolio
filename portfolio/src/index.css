@@ -126,8 +126,13 @@ footer a {
 
 footer a:hover {
   color: #384764; 
-  font-size: 17px;
+  font-size: 40px;
   font-weight: bold;
+}
+
+.github, .stackOverFlow, .linkedIn, .instagram{
+  color: white;
+  font-size: 30px;
 }
 
 /* Styling for various screen sizes and what elements change for the different sizes*/

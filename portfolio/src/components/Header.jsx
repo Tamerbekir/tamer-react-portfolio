@@ -19,7 +19,7 @@ export default function Header() {
                 <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : 'nav-link'} >About Me</NavLink>
                 <NavLink to="/portfolio" className={({ isActive }) => isActive ? 'active' : 'nav-link'}>Portfolio</NavLink>
                 <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : 'nav-link'}>Contact</NavLink>
-                {/* NavLink to downloadable resume and bring user to resume page */}
+                {/* NavLink to downloadable resume */}
                 <NavLink to={ resume } target="_blank" download>Resume</NavLink>
             </nav>
         </div>
