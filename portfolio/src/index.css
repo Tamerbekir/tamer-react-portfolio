@@ -1,22 +1,29 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* :root {
+  background-color: 
+} */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Styling for main body */
+body {
+  background: rgb(205,186,212);
+  background: radial-gradient(circle, rgba(205,186,212,1) 0%, rgba(148,187,233,1) 100%);
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
+
+h1 { 
+  font-size: 30px;
+  line-height: 1.1;
+}
+
 
 /* Styling for header */
 .header {
   display: flex;
   border-bottom: 1px solid #000000;
+  border-top:1px #000000;
   font-size: 18px;
   margin-bottom: 20px;
   padding: 0px 15px;
@@ -25,7 +32,7 @@
 
 /* Styling for nav 'a' tag elements in header */
 .header nav a {
-  color: #6634c2; 
+  color: white;
   margin: 0 10px;
   padding: 10;
 }
@@ -43,29 +50,36 @@
 .header nav a.active, .header nav a.active:hover {
   color: #384764; 
   font-weight: bold;
+  font-size: 20px;
 }
 
 .header nav a:hover {
-  color: #c4bcd2; 
+  color: #384764; 
+  font-weight: bold;
+  /* font-size: 20px; */
 }
-
 
 /* Name styling */
 .navName {
   list-style: none;
   margin-right: auto; 
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 /* styling when user hoves over links */
 .navName li a:hover {
-  color: #c4bcd2; 
+  color: #384764; 
+  font-weight: bold;
 } 
 
 /* Styling for list item (name) 'a' tag elements */
 .navName li a {
   font-weight: bold;
+}
+/* Styling for list item (name) 'li' tag elements */
+.navName li {
+  margin-top: 8%;
 }
 
 /* contact information for the user to enter  */
@@ -81,23 +95,6 @@ a {
   text-decoration: inherit;
 }
 
-.navName li {
-  margin-top: 3.5%;
-}
-
-/* Styling for main body */
-body {
-  margin: 0;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 { 
-  font-size: 30px;
-  line-height: 1.1;
-}
-
 /* styling for contact submit button */
 .submitContact {
   font-family: inherit;
@@ -111,21 +108,59 @@ h1 {
   background-color: #6075a0;
 }
 
+footer {
+  color: rgba(96, 90, 99, 0.494);
+  margin: 5%;
+}
+
+footer li {
+  color: white;
+  margin: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #384764; 
+  font-size: 17px;
+  font-weight: bold;
+}
+
 /* Styling for various screen sizes and what elements change for the different sizes*/
-@media (max-width: 600px) {
+@media (max-width: 615px) {
   .header nav {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
   }
+
+  footer li {
+    margin: auto;
+    margin-right: 8%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navName {
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   .header {
     font-size: 20px;
     padding: 1;
     justify-content: center;
+    margin-bottom: 10%;
   }
 
   .navName {
-    font-size: 20px;
+    font-size: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
