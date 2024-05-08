@@ -1,36 +1,40 @@
+// Bringing in the functions that are used within the Contacts
+import { submitForm, useForm } from "../components/Form/formHandler";
 
-//importing helpers for handling submit button for form and handle blue for input error handling
-import { submitForm, handleBlur } from "../components/Form/formHandler";
-
-// Exporting Contact function and JSX to be rendered
-// If user does not enter information and hovers away from the input fields they will get a message within the input field
 export default function Contact() {
+    // Bringing in input handlers. Name and email are empty strings (nothing preset in them)
+    const { inputText, errors, handleChange, handleBlur } = useForm({ name: '', email: '' });
+
     return (
         <div className="text-center contact">
             <h1>Contact Me</h1>
             <p>This is the Contact me section.</p>
-            {/* submit form will display an alert when clicked */}
-            <form noValidate onSubmit={ submitForm }>
+            <form noValidate onSubmit={submitForm}>
                 <div className="mb-3">
                     <label className="form-label">Name</label>
-                    {/* on blur takes effect when user leaves the email section with any input  */}
-
-                    <input type="text" className="form-control" id="contactInputName" required onBlur={ handleBlur } />
-
-
-                    {/* display a style of nothing if user does not yet go into the input field to type someone ein */}
-                    <div className="invalid-feedback" style={{ display: 'none' }}>
-                        Please enter a name.
-                    </div>
+                    <input type="text" name="name" className="form-control"
+                        id="contactInputName"
+                        //This is the what the user enters into the value field tied to then name value
+                        value={inputText.name}
+                        // onChange uses handleChange variable
+                        onChange={handleChange}
+                        // onChange uses handleBlur variable
+                        onBlur={handleBlur} />
+                        {/* This is the error message that is displayed if the user does not enter a name. "invalid-feedback" displays the color red while display block helps display the message*/}
+                    {errors.name && <div className="invalid-feedback" style={{ display: 'block' }}>
+                        {errors.name}
+                    </div>}
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Email</label>
-                    {/* on blur takes effect when user leaves the email section with any input  */}
-                    <input type="email" className="form-control" id="contactInputEmail" required onBlur={ handleBlur } />
-                    {/* display a style of nothing if user does not yet go into the input field to type someone ein */}
-                    <div className="invalid-feedback" style={{ display: 'none' }}>
-                    Please enter an email.
-                    </div>
+                    <input type="email" name="email" className="form-control"
+                        id="contactInputEmail"
+                        value={inputText.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur} />
+                    {errors.email && <div className="invalid-feedback" style={{ display: 'block' }}>
+                        {errors.email}
+                    </div>}
                 </div>
                 <button type="submit" className="btn btn-primary m-3">Submit</button>
             </form>

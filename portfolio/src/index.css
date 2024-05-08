@@ -14,6 +14,8 @@ body {
 }
 
 h1 { 
+  color: #384764;
+  font-weight: bold;
   font-size: 30px;
   line-height: 1.1;
 }
@@ -22,8 +24,7 @@ h1 {
 /* Styling for header */
 .header {
   display: flex;
-  border-bottom: 1px solid #000000;
-  border-top:1px #000000;
+  border-bottom: 2px solid #fbfeff34;
   font-size: 18px;
   margin-bottom: 20px;
   padding: 0px 15px;
@@ -47,10 +48,11 @@ h1 {
 }
 
 /* Color for active link is light blue and bold */
-.header nav a.active, .header nav a.active:hover {
+.header nav a.active, 
+.header nav a.active:hover {
   color: #384764; 
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .header nav a:hover {
@@ -83,15 +85,27 @@ h1 {
 }
 
 /* contact information for the user to enter  */
-#contactInputName, #contactInputEmail{
-  margin: auto;
-  width: 50%
+#contactInputName, 
+#contactInputEmail {
+  margin:auto;
+  max-width: 30%;
+}
+
+.btn {
+  background-color: #384764; 
+  border-color: #384764;
+  color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+  background-color: #384764b5;
+  border-color: #3847648c;
 }
 
 /* Styling for 'a' tag elements  */
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #384764; 
   text-decoration: inherit;
 }
 
@@ -130,23 +144,70 @@ footer a:hover {
   font-weight: bold;
 }
 
-.github, .stackOverFlow, .linkedIn, .instagram{
+.github, 
+.stackOverFlow, 
+.linkedIn, 
+.instagram{
   color: white;
   font-size: 30px;
 }
 
+.img-aboutMe {
+    /* min-width: 8%; */
+    max-width: 10%;
+    border-radius: 15%;
+    border: solid 2px #7f5ee33a;
+  }
+
+
+.portfolio {
+  margin: auto;
+  max-width: 70%;
+}
+
+.portfolioHeader {
+  margin-bottom: 5%;
+}
+
+.portfolioText {
+  margin-bottom: 50%;
+}
+
+
+.card-group {
+  margin-left: 30%;
+  max-width: 40%;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow effects */
+}
+
 /* Styling for various screen sizes and what elements change for the different sizes*/
-@media (max-width: 615px) {
+@media (max-width: 768px) {
   .header nav {
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
   }
 
+  #contactInputName,
+  #contactInputEmail {
+    margin: auto;
+    width: 30%;
+    /* min-width: 10%; */
+  }
+
+  .card-group {
+    margin-left: 0%;
+    max-width: 100%;
+    transition: box-shadow 0.3s ease-in-out; 
+  }
+
+  .img-aboutMe {
+    max-width: 25%;
+  }
+
   footer li {
     margin: auto;
     margin-right: 8%;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -182,5 +243,4 @@ footer a:hover {
     font-size: 10px;
   }
 }
-
 
