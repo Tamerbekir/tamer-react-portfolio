@@ -8,19 +8,19 @@ export default function Portfolio() {
             <p>This is the portfolio section.</p>
             <div className="row"> {/* Start of first row */}
                 <div className="col-md-4 mb-4"> {/* Each card takes up 4 columns */}
-                    <a href="https://www.example.com">
-                        <div className="card">
-                            <img src={techBlogImg} className="card-img-top img-portfolio" alt="tech-blog-photo" />
-                            <div className="card-body">
-                                <h5 className="card-title">Tech Blog</h5>
-                                <p className="card-text">A website designed with a database to take in new and existing users that can create blogs and discuss the latest tech!</p>
-                            </div>
+                    <div className="card">
+                        <a href="https://www.example.com">
+                            <img src={techBlogImg} className="card-img-top img-portfolio" alt="tech-blog-photo" /></a>
+                        <div className="card-body">
+                            <h5 className="card-title">Tech Blog</h5>
+                            <p className="card-text">A website designed with a database to take in new and existing users that can create blogs and discuss the latest tech!</p>
+                            <a href="https://github.com/Tamerbekir/Tamer-Model-View-Controller-MVC-Tech-Blog">GitHub Repo</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder"/>
+                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -30,7 +30,7 @@ export default function Portfolio() {
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder"/>
+                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
@@ -42,7 +42,7 @@ export default function Portfolio() {
             <div className="row"> {/* Start of second row */}
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder"/>
+                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
@@ -52,7 +52,7 @@ export default function Portfolio() {
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder"/>
+                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -62,7 +62,7 @@ export default function Portfolio() {
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder"/>
+                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
