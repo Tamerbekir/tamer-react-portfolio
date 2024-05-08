@@ -1,5 +1,7 @@
 import projectOne from '../assets/placeholder.jpeg';
 import techBlogImg from '../assets/techBlog.jpeg';
+import weatherAppImg from '../assets/weatherDashboard.jpeg'
+import quizAppImg from '../assets/metsCodeQuick.jpeg'
 
 export default function Portfolio() {
     return (
@@ -20,21 +22,23 @@ export default function Portfolio() {
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
+                        <a href="https://tamerbekir.github.io/tamers-weather-dashboard/">
+                            <img src={weatherAppImg} className="card-img-top" alt="Placeholder" /> </a>
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 className="card-title">Weather Dashboard</h5>
+                            <p className="card-text">Check the weather near you!</p>
+                            <a href="https://github.com/Tamerbekir/tamer-mets-quiz">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
+                        <a href="https://tamerbekir.github.io/tamer-mets-quiz/">
+                            <img src={quizAppImg} className="card-img-top" alt="Placeholder" /> </a>
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 className="card-title">Mets Code Quiz</h5>
+                            <p className="card-text">Take a short quiz and test your baseball knowledge!</p>
+                            <a href="https://github.com/Tamerbekir/tamer-mets-quiz">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +74,8 @@ export default function Portfolio() {
                         </div>
                     </div>
                 </div>
-            </div> {/* End of second row */}
+            </div>
+            <a href="https://github.com/Tamerbekir/tamer-react-portfolio">Portfolio-React GitHub Repo</a>                 
         </div>
     );
 }
