@@ -7,7 +7,7 @@ export default function Contact() {
 
     return (
         <div className="text-center contact">
-            <h1>Contact Me</h1>
+            <h1>Contact</h1>
             <p className="contactText" >Be sure to leave your name and email address below if you wish to be contacted.</p>
             <form noValidate onSubmit={submitForm}>
                 <div className="mb-3">
