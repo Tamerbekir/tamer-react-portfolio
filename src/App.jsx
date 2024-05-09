@@ -10,7 +10,6 @@ import { About, Portfolio, Contact, Resume, Error } from './pages'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-
 // exporting routes to the main App along with consistent header and footer
 export default function App() {
   return (
@@ -32,4 +31,5 @@ export default function App() {
     </>
   );
 }
+
 
