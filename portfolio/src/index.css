@@ -57,7 +57,8 @@ h1 {
 .header nav a:hover {
   color: #384764; 
   font-weight: bold;
-  /* font-size: 20px; */
+  box-shadow: 0 2px 0 0;  
+  transition: all .8s;
 }
 
 /* Name styling */
@@ -141,6 +142,7 @@ footer a:hover {
   color: #384764; 
   font-size: 40px;
   font-weight: bold;
+  transition: all .8s;
 }
 
 .github, 
@@ -153,30 +155,31 @@ footer a:hover {
 }
 
 .img-aboutMe {
-    /* min-width: 8%; */
-    max-width: 10%;
-    border-radius: 15%;
-    border: solid 2px #7f5ee33a;
-  }
-
+  max-width: 10%;
+  border-radius: 15%;
+  border: solid 2px #7f5ee33a;
+}
 
 .portfolio {
   margin: auto;
   max-width: 70%;
 }
 
-.portfolioHeader {
-  margin-bottom: 5%;
-}
 
 .portfolioText {
-  margin-bottom: 50%;
+  color: #2a3853;  
+  font-size: 18px;
 }
+
+.projectText:hover {
+  font-size: 18px;
+}
+
 
 .card-group {
   margin-left: 30%;
   max-width: 40%;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 1s ease-in-out;
 }
 
 .card:hover {
@@ -186,7 +189,6 @@ footer a:hover {
       transition:all 1s;
 }
 
-
 .techBlogAppImg {
   height: 50%;
 }
@@ -195,10 +197,30 @@ footer a:hover {
   height: 30%;
 }
 
+.aboutMeText {
+  color: #2a3853; 
+  font-size: 18px;
+  margin: 3%;
+  max-width: 70%;
+  margin-left: 15%;
+  height: 50%;
+}
+
+.aboutMeHeader, .portfolioHeader {
+  margin: 3%;
+}
+
+.contactText {
+  color: #2a3853; 
+  font-size: 17px;
+  margin: 3%;
+  max-width: 70%;
+  margin-left: 15%;
+  height: 50%;
+}
+
 /* Styling for various screen sizes and what elements change for the different sizes*/
-@media (
-  
-max-width: 768px) {
+@media (max-width: 768px) {
   .header nav {
     flex-direction: column;
     align-items: center;
@@ -210,6 +232,11 @@ max-width: 768px) {
     margin: auto;
     width: 30%;
     /* min-width: 10%; */
+  }
+
+  .aboutMeText {
+    font-size: 11px;
+    font-weight: bold;
   }
 
   .card-group {
