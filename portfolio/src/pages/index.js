@@ -3,6 +3,7 @@ export { default as About } from './About'
 export { default as Portfolio } from './Portfolio'
 export { default as Contact } from './Contact'
 export { default as Resume } from './Resume'
+export { default as Error } from './Error'
 
 //Exporting images from assets folder to portfolio page
 export { default as techBlogImg } from '../assets/techBlog.jpeg'; 

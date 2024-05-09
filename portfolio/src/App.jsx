@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Bringing in Header and Foot from index.js in components folder where Header and Foot elements are exported
 import { Header, Footer } from './components'
 // Bringing in all pages from index.js in pages folder where all elements are being exported
-import { About, Portfolio, Contact, Resume } from './pages'
+import { About, Portfolio, Contact, Resume, Error } from './pages'
 
 //bringing bootstrap and bringing in index.css for styling
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,6 +24,7 @@ export default function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         {/* Footer from components */}
         <Footer />
