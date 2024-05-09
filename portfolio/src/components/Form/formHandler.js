@@ -6,6 +6,12 @@ export const submitForm = (e) => {
     alert('This is a work in progress! Please try again later!')
 }
 
+// User gets a prompt if they go to view an application that is not deployable
+export const projectDefault = (e) => {
+    e.preventDefault();
+    alert('This project showcases back-end development only and is not deployable. Please view the GitHub repository for more information.')
+}
+
 // Form validation using email regex and contact name and custom hook for form state management and validation.
 export const useForm = (inputValues) => {
     // Using inputText and errors for useState. 
@@ -21,10 +27,10 @@ export const useForm = (inputValues) => {
         if (!value) {
             // is there is nothing entered by the user, display Required
             userError[userInfo] = `Required`;
-            // If the user enters an email that is not valid, display an error message.
+            // Testing the value of the users value they typed in the input field. If the user enters an email that is not valid/does not match regex, display an error message.
         } else if (userInfo === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
             // then display message informing user email is not valid
-            userError[userInfo] = 'Email is not valid';
+            userError[userInfo] = 'Please enter a valid email';
             // If the user enters a name and email that are good, delete any error message on the screen
         } else {
             delete userError[userInfo]; 

@@ -48,8 +48,7 @@ h1 {
 }
 
 /* Color for active link is light blue and bold */
-.header nav a.active, 
-.header nav a.active:hover {
+.header nav a.active {
   color: #384764; 
   font-weight: bold;
   font-size: 22px;
@@ -148,6 +147,7 @@ footer a:hover {
 .stackOverFlow, 
 .linkedIn, 
 .instagram{
+  transition: all 1.5;
   color: white;
   font-size: 30px;
 }
@@ -176,7 +176,7 @@ footer a:hover {
 .card-group {
   margin-left: 30%;
   max-width: 40%;
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow effects */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {

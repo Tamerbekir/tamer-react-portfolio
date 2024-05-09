@@ -1,7 +1,11 @@
-import projectOne from '../assets/placeholder.jpeg';
 import techBlogImg from '../assets/techBlog.jpeg';
 import weatherAppImg from '../assets/weatherDashboard.jpeg'
 import quizAppImg from '../assets/metsCodeQuick.jpeg'
+import ecommerceBackEndimg from '../assets/ecommerceBackEnd.jpeg'
+import sqlEmployeeTrackerimg from '../assets/sqlEmployeeTracker.jpeg'
+import noSqlSocialApiImg from '../assets/noSqlSocialApiImg.jpeg'
+
+import { projectDefault } from '../components/Form/formHandler';
 
 export default function Portfolio() {
     return (
@@ -10,8 +14,8 @@ export default function Portfolio() {
             <p>This is the portfolio section.</p>
             <div className="row"> {/* Start of first row */}
                 <div className="col-md-4 mb-4"> {/* Each card takes up 4 columns */}
-                    <div className="card">
-                        <a href="https://www.example.com">
+                    <div className="card" >
+                        <a href="https://tamers-techblog-7d9d9db3bd10.herokuapp.com/">
                             <img src={techBlogImg} className="card-img-top img-portfolio" alt="tech-blog-photo" /></a>
                         <div className="card-body">
                             <h5 className="card-title">Tech Blog</h5>
@@ -26,7 +30,7 @@ export default function Portfolio() {
                             <img src={weatherAppImg} className="card-img-top" alt="Placeholder" /> </a>
                         <div className="card-body">
                             <h5 className="card-title">Weather Dashboard</h5>
-                            <p className="card-text">Check the weather near you!</p>
+                            <p className="card-text">This application uses a Weather API from OpenWeather that allows a user to check weather around the world.  </p>
                             <a href="https://github.com/Tamerbekir/tamer-mets-quiz">GitHub Repo</a>
                         </div>
                     </div>
@@ -37,7 +41,7 @@ export default function Portfolio() {
                             <img src={quizAppImg} className="card-img-top" alt="Placeholder" /> </a>
                         <div className="card-body">
                             <h5 className="card-title">Mets Code Quiz</h5>
-                            <p className="card-text">Take a short quiz and test your baseball knowledge!</p>
+                            <p className="card-text">Take a short quiz and test your baseball knowledge using HTML, CSS and Javascript with local storage!</p>
                             <a href="https://github.com/Tamerbekir/tamer-mets-quiz">GitHub Repo</a>
                         </div>
                     </div>
@@ -46,36 +50,36 @@ export default function Portfolio() {
             <div className="row"> {/* Start of second row */}
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
+                        <img src={ecommerceBackEndimg} onClick={projectDefault} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 className="card-title">ORM eCommerce</h5>
+                            <p className="card-text">This application is the back end of an eCommerce that utilizes Sequelize for Object-Relational Mapping (ORM).</p>
+                            <a href="https://github.com/Tamerbekir/tamer-orm-ecommerce-back-end">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
+                        <img src={sqlEmployeeTrackerimg} onClick={projectDefault} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 className="card-title">SQL Employee Tracker</h5>
+                            <p className="card-text">This application allows a company to keep track of their employees, their roles/titles, their departments, as well as their salaries and managers using MySQL.</p>
+                            <a href="https://github.com/Tamerbekir/tamer-sql-employee-tracker">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4 mb-4">
                     <div className="card">
-                        <img src={projectOne} className="card-img-top" alt="Placeholder" />
+                        <img src={noSqlSocialApiImg} onClick={projectDefault} className="card-img-top" alt="Placeholder" />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 className="card-title">NoSQL Social Network API</h5>
+                                <p className="card-text">This application is the backend of a social networking API using NoSQL.</p>
+                            <a href="https://github.com/Tamerbekir/Tamer-NoSQL-Social-Network-API">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/Tamerbekir/tamer-react-portfolio">Portfolio-React GitHub Repo</a>                 
+            <a href="https://github.com/Tamerbekir/tamer-react-portfolio">Portfolio-React GitHub Repo</a>
         </div>
     );
 }
