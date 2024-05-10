@@ -3,8 +3,12 @@ import { useState } from 'react';
 //Displaying alert if user tries to submit information at this time (lack of functioning form)
 export const submitForm = (e) => {
     e.preventDefault();
-    alert('This is a work in progress! Please try again later!')
+    if (submitForm) {
+        alert('This is a work in progress! Please try again later!');
+    }
 }
+
+
 
 // User gets a prompt if they go to view an application that is not deployable
 export const projectDefault = (e) => {
@@ -21,7 +25,7 @@ export const useForm = (inputValues) => {
     // Validates the form input fields and updates the error state 
     const validate = (userInfo, value) => {
         // Variable for errors using spread method to bring in all errors
-        let userError = {...errors};
+        let userError = { ...errors };
 
         // if there is no value (input field left empty), display an error for the user within for the name input field and display message.
         if (!value) {
@@ -33,7 +37,7 @@ export const useForm = (inputValues) => {
             userError[userInfo] = 'Please enter a valid email';
             // If the user enters a name and email that are good, delete any error message on the screen
         } else {
-            delete userError[userInfo]; 
+            delete userError[userInfo];
         }
 
         // Display/set the error from error variable

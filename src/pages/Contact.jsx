@@ -3,7 +3,7 @@ import { submitForm, useForm } from "../components/Form/formHandler";
 
 export default function Contact() {
     // Bringing in input handlers. Name and email are empty strings (nothing preset in them)
-    const { inputText, errors, handleChange, handleBlur } = useForm({ name: '', email: '' });
+    const { inputText, errors, handleChange, handleBlur } = useForm({ name: '', email: '', message: '' });
 
     return (
         <div className="text-center contact">
@@ -35,6 +35,13 @@ export default function Contact() {
                     {errors.email && <div className="invalid-feedback" style={{ display: 'block' }}>
                         {errors.email}
                     </div>}
+                </div>
+                {/* Added message field*/}
+                <div className="mb-5 messageText" >
+                    <label className="form-label">Message</label>
+                    <textarea className="form-control" rows="3" name="message"
+                        id="contactInputMessage"                        
+                    ></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary m-3">Submit</button>
             </form>
