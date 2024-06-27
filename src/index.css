@@ -11,7 +11,7 @@
 /* Styling for main body */
 body {
   background: rgb(205,186,212);
-  background: radial-gradient(circle, rgba(205,186,212,1) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(circle, rgb(223, 219, 224) 0%, rgb(198, 210, 224) 100%);
   font-family: 'Maven Pro';
   margin: 0;
   place-items: center;
@@ -34,6 +34,8 @@ h1 {
   font-size: 18px;
   margin-bottom: 20px;
   padding: 0px 15px;
+  border-radius: 40px;
+  margin-top: -1%;
 }
 
 
@@ -178,18 +180,54 @@ footer a:hover {
 }
 
 
-.card-group {
-  margin-left: 30%;
-  max-width: 40%;
-  transition: box-shadow 1s ease-in-out;
+/* Card styling */
+.card {
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover {
-      margin:3%;
-      background: rgba(142, 155, 170, 0.142);
-      font-size:18px;
-      transition:all 1s;
+.card img {
+  transition: filter 0.5s ease-in-out;
 }
+
+.card:hover img {
+  filter: blur(5px);
+}
+
+.card-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 65px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #384764; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.card {
+  border-radius: 20px;
+  border: solid rgba(38, 10, 148, 0.353) 2px;
+  box-shadow: 10px 10px 20px rgba(146, 215, 238, 0.32);
+}
+
+.card:hover .card-button {
+  opacity: 1;
+}
+
+/* .projectText {
+  
+} */
+
+/* .card-button:hover {
+  transition: all 1s;
+} */
+
 
 .techBlogAppImg {
   height: 50%;
@@ -261,6 +299,7 @@ footer a:hover {
     margin-right: 8%;
     align-items: center;
   }
+
 
   .navName {
     margin: auto;

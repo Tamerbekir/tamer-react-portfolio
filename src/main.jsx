@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { 
     About, 
     Portfolio, 
-    Contact, 
+    // Contact, 
     Resume, 
     Error } from './pages'
 
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         [
             { index: true, element: <About /> },
             { path: '/portfolio', element: <Portfolio /> },
-            { path: '/contact', element: <Contact /> },
+            // { path: '/contact', element: <Contact /> },
             { path: '/resume', element: <Resume /> },
         ],
     },

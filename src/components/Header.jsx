@@ -18,11 +18,11 @@ export default function Header() {
                     </li>
                 </ul>
                 {/* Navigational links  */}
-                <NavLink to="/">About</NavLink>
-                <NavLink to="/portfolio">Portfolio</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/">about</NavLink>
+                <NavLink to="/portfolio">portfolio</NavLink>
+                {/* <NavLink to="/contact">Contact</NavLink> */}
                 {/* NavLink to downloadable resume */}
-                <NavLink to={ resume } target="_blank" download>Resume</NavLink>
+                <NavLink to={ resume } target="_blank" download>resume</NavLink>
             </nav>
         </div>
     );

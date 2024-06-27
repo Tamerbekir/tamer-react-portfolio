@@ -4,7 +4,7 @@
  export default function About() {
     return (
         <div className="text-center about">
-            <h1 className='aboutMeHeader' >About</h1>
+            <h1 className='aboutMeHeader' >about</h1>
                 <img src={ headShot } className="img-aboutMe" alt="Headshot" />
             <p className='aboutMeText' >Hello there! I am Tamer, a web developer from Westchester, NY. I have a big passion for crafting new and exciting web experiences. I enjoy connecting both technology and creativity together to create something new and innovative. 
             <br />
