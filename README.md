@@ -26,6 +26,8 @@ To get a local copy up and running, follow these simple steps:
 
 Be sure to have the following technologies installed when cloning or forking this repo.
 
+View my portfolio <a href="https://tamerbekirportfolio.netlify.app/"> here </a>  
+
 ## Technologies Used
 
 - [React](https://reactjs.org/)
