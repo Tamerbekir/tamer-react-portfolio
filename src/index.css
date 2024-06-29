@@ -30,6 +30,14 @@ html {
   font-weight: bold;
 }
 
+.resumeDownloadText {
+  font-size: 17px !important;
+}
+
+.resumeDownloadText:hover {
+  color: green;
+  transition: 0.5s;
+}
 
 main {
   padding-top: 40px;
@@ -80,12 +88,18 @@ body {
   border-color: #3847648c;
 }
 
-/* Styling for 'a' tag elements  */
-/* a {
+a {
   font-weight: 500;
   color: #384764; 
   text-decoration: inherit;
-} */
+}
+
+a:hover {
+  color: #384764; 
+  font-size: 17px;
+  font-weight: bold;
+  transition: all .8s;
+}
 
 /* styling for contact submit button */
 .submitContact {

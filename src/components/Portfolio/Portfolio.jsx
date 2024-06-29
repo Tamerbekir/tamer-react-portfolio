@@ -136,7 +136,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <a href="https://github.com/Tamerbekir/tamer-react-portfolio">Portfolio-React GitHub Repo</a>
+      <a href="https://github.com/Tamerbekir">See all repos</a>
     </div>
   );
 }

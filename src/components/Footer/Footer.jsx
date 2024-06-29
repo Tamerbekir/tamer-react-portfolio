@@ -1,6 +1,8 @@
 // Footer that stays consistent throughout the page...and... 
 // ...made with a lot of love :)
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaReact } from "react-icons/fa";
+
 
 //importing icons from Font Awesome and using icons for footer and links
 import { faGithub, faInstagram, faStackOverflow, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +18,7 @@ export default function Footer() {
                     <a className='instagram' href="https://www.instagram.com/keplertam/"><FontAwesomeIcon icon={faInstagram} /></a>
                 </li>
             </ul>
-            <p>Created with 💙 by Tamer Bekir</p>
+            <p>Created with 💙 by Tamer Bekir...and a little bit of <FaReact style={{ color: 'teal', fontSize: '22px'}} /> </p>
         </footer>
     );
 }

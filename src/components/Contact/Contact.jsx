@@ -117,7 +117,8 @@ const Contact = () => {
       <h1 className='contactHeader' id='contact'>Contact</h1>
       <Form onSubmit={sendEmail} className='contactContainer'>
         <br />
-        <Form.Text className='messageName'>Your Name</Form.Text>
+        <Form.Text className='messageName'></Form.Text>
+        <FloatingLabel label="Your name" >
         <Form.Control
           className='nameInput'
           type="text"
@@ -125,23 +126,24 @@ const Contact = () => {
           value={userData.username}
           onChange={handleUserChange}
         />
+        </FloatingLabel>
         <p style={{ color: '#F56742' }}>{error.username}</p>
-        <Form.Text className='messageEmail'>Your Email</Form.Text>
+        <Form.Text className='messageEmail'></Form.Text>
+        <FloatingLabel label="Your email">
         <Form.Control 
-          className='emailInput'
           type="email"
           name="userEmail"
           value={userData.userEmail}
           onChange={handleUserChange}
         />
+        </FloatingLabel>
         <p style={{ color: '#F56742' }}>{error.userEmail}</p>
         <Form.Text className='messageText'>Reason for contact</Form.Text>
-        <FloatingLabel label="Message">
+        <FloatingLabel label="Reason for contact">
           <Form.Control
             className='messageInput'
             name="message"
             as="textarea"
-            placeholder="Reason for contact"
             style={{ height: '100px' }}
             value={userData.message}
             onChange={handleUserChange}

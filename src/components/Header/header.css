@@ -26,6 +26,15 @@ a {
   transition: all 0.8s;
 }
 
+.navText {
+  font-size: 20px;
+}
+
+.navText:hover {
+  font-size: 21px;
+  transition: all 0.3s;
+}
+
 .navName li a {
   font-weight: bold;
   font-size: 30px;
