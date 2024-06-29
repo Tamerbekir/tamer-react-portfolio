@@ -138,7 +138,7 @@ const Contact = () => {
         />
         </FloatingLabel>
         <p style={{ color: '#F56742' }}>{error.userEmail}</p>
-        <Form.Text className='messageText'>Reason for contact</Form.Text>
+        <Form.Text className='messageText'></Form.Text>
         <FloatingLabel label="Reason for contact">
           <Form.Control
             className='messageInput'
