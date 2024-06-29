@@ -14,14 +14,14 @@ import { Portfolio, Contact, Resume } from '../components'
             <br />
             <br />
             Feel free to browse my portfolio, check out my projects,  repositories and social handles below. Be sure to download my resume above for more professional information. Lastly, make sure to check out the contact page as well so we can embark on new projects together!</p>
+            <>
+        <Resume />
+        </>
         <>
         <Portfolio />
         </>
         <>
         <Contact />
-        </>
-        <>
-        <Resume />
         </>
         </div>
     );
