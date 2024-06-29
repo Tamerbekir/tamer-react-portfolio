@@ -23,9 +23,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.resumeText, .resumeDownloadText {
+  color: #384764;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 main {
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 h1 { 
@@ -54,43 +61,6 @@ body {
   padding-top: 60px; /* Adjust this value based on the height of your header */
 }
 
-.header nav a {
-  color: #384764;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.header nav a.active {
-  color: #384764;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.header nav a:hover {
-  color: #384764;
-  font-weight: bold;
-  box-shadow: 0 2px 0 0;
-  transition: all 0.8s;
-}
-
-.navName li a {
-  font-weight: bold;
-  font-size: 30px;
-  text-decoration: none;
-  color: #384764;
-}
-
-.navName {
-  list-style: none;
-  margin-right: auto;
-  padding: 0;
-}
-
-.navName li {
-  display: inline;
-}
-
 
 /* contact information for the user to enter  */
 #contactInputName, 
@@ -111,11 +81,11 @@ body {
 }
 
 /* Styling for 'a' tag elements  */
-a {
+/* a {
   font-weight: 500;
   color: #384764; 
   text-decoration: inherit;
-}
+} */
 
 /* styling for contact submit button */
 .submitContact {
@@ -276,34 +246,6 @@ h2 {
 @media (max-width: 768px) {
 
 
-  nav {
-    padding: 10px;
-  }
-
-  .header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    /* padding-bottom: 40px; */
-  }
-
-  .navName {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-  }
-
-  .navName li {
-    display: block; /* Ensure list items are block-level elements */
-    margin-bottom: 10px; /* Add some space between items */
-    
-  }
-
   #contactInputName,
   #contactInputEmail {
     margin: auto;
@@ -343,9 +285,6 @@ h2 {
     font-size: 30px;
   }
 
-  p {
-    font-size: 12px;
-  }
 
   /* .form-text {
     font-size: 10px;

@@ -6,7 +6,7 @@ const Resume = () => {
         <div className="text-center resume resumeDiv">
             {/* <h1 id="resume">Resume</h1>
             {/* <p>This is the Resume section.</p> */}
-            <p>Feel free to download my complete resume here.</p>
+            <p className='resumeText' >Feel free to download my complete resume here.</p>
             <a className="resumeDownloadText" href={resumeFile} download="Resume.pdf">Download Resume</a>
         </div>
     );

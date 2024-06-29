@@ -19,6 +19,7 @@ const Portfolio = () => {
       <p className='portfolioText'>Welcome to the portfolio showcase! Here, you will discover a collection of my latest projects. From web applications that deal with APIs, databases, back-end applications and much more. Each project represents a journey of creativity, problem-solving, and innovation. Feel free to view the web application or Git Repository that showcase my skills, passion, and the diverse range of projects I have had the privilege to work on.
       </p>
       <h3>Independent Projects</h3>
+      <p>*please note some applications may take additional time loading due to shared servers.</p>
       <div className="row"> {/* Start of first row */}
         <div className="col-md-4 mb-4"> {/* Each card takes up 4 columns */}
           <div className="card">

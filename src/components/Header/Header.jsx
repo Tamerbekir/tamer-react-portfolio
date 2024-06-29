@@ -1,31 +1,32 @@
-// Using NavLink so the user can redirect between the links in the header
-// Using NavLink also helps keep links active when clicking on them/currently on the page
 import { NavLink } from 'react-router-dom';
-//bringing in resume from assets folder to use as a downloadable link for Resume page
-import resume from '../../assets/futureresume.pdf'
+import { FaHome, FaUser, FaFolderOpen, FaFileDownload } from 'react-icons/fa';
+import resume from '../../assets/futureresume.pdf';
+import './header.css';
 
-// This will stay consistent throughout the page. When the user clicks on a link it will redirect them to the applicable page.
-
-
-// All elements here are exported to the App.jsx where it is rendered with the main HTML
-export default function Header() {
-    return (
-        <div className='header'>
-            <nav>
-                {/* main title (my name) of portfolio that also has user GitHub attached */}
-                <ul className='navName'>
-                    <li>
-                        <a href="http://www.github.com/tamerbekir">Tamer Bekir</a>
-                    </li>
-                </ul>
-                {/* Navigational links  */}
-                <NavLink onClick={() => window.location.href = "#about"}>about</NavLink>
-                <NavLink onClick={() => window.location.href = "#portfolio"}>portfolio</NavLink>
-                <NavLink onClick={() => window.location.href = '#contact' }>contact</NavLink>
-                {/* <NavLink onClick={() => window.location.href = '#resume'}>resume</NavLink> */}
-                <NavLink to={ resume } target="_blank" download>download resume</NavLink>
-            </nav>
-        </div>
-    );
+const Header = () => {
+  return (
+    <div className='header'>
+      <nav>
+        <ul className='navName'>
+          <li>
+            <a className="navTitle" href="http://www.github.com/tamerbekir">Tamer Bekir</a>
+          </li>
+        </ul>
+        <NavLink className="aboutLink" onClick={() => window.location.href = "#about"}>
+          <FaHome className="navIcon" /> <span className="navText">about</span>
+        </NavLink>
+        <NavLink className="portfolioLink" onClick={() => window.location.href = "#portfolio"}>
+          <FaFolderOpen className="navIcon" /> <span className="navText">portfolio</span>
+        </NavLink>
+        <NavLink className="contactLink" onClick={() => window.location.href = "#contact"}>
+          <FaUser className="navIcon" /> <span className="navText">contact</span>
+        </NavLink>
+        <NavLink to={resume} target="_blank" download>
+          <FaFileDownload className="navIcon" /> <span className="navText">download resume</span>
+        </NavLink>
+      </nav>
+    </div>
+  );
 }
 
+export default Header
