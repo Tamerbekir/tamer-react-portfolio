@@ -9,20 +9,16 @@ import {
   activeEatsImg,
   pennyWiseImg,
   projectDefault
-} from './index'
+} from '../'
 
-// const const = (e) => {
-//   e.preventDefault();
-//   alert('This project showcases back-end development only and is not deployable. Please view the GitHub repository for more information.')
-// }
 
-export default function Portfolio() {
+const Portfolio = () => {
   return (
     <div className="container text-center portfolio">
-      <h1 className='portfolioHeader'>portfolio</h1>
+      <h1 className='portfolioHeader' id='portfolio'>portfolio</h1>
       <p className='portfolioText'>Welcome to the portfolio showcase! Here, you will discover a collection of my latest projects. From web applications that deal with APIs, databases, back-end applications and much more. Each project represents a journey of creativity, problem-solving, and innovation. Feel free to view the web application or Git Repository that showcase my skills, passion, and the diverse range of projects I have had the privilege to work on.
       </p>
-      <h2>Independent Projects</h2>
+      <h3>Independent Projects</h3>
       <div className="row"> {/* Start of first row */}
         <div className="col-md-4 mb-4"> {/* Each card takes up 4 columns */}
           <div className="card">
@@ -64,7 +60,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div> {/* End of first row */}
-      <h2>Group Projects</h2>
+      <h3>Group Projects</h3>
       <div className="row"> {/* Start of second row */}
         <div className="col-md-4 mb-4">
           <div className="card">
@@ -106,7 +102,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-      <h2>Backend Projects</h2>
+      <h3>Backend Projects</h3>
       <div className="row"> {/* Start of second row */}
         <div className="col-md-4 mb-4">
           <div className="card">
@@ -143,3 +139,5 @@ export default function Portfolio() {
     </div>
   );
 }
+
+export default Portfolio

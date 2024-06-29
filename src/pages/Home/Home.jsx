@@ -1,10 +1,11 @@
 // Exporting About function and JSX to be rendered
- import headShot from '../assets/headshot.png'
+import headShot from '../../assets/headshot.png'
+import { Portfolio, Contact, Resume } from '../components'
  
- export default function About() {
+ export default function Home() {
     return (
         <div className="text-center about">
-            <h1 className='aboutMeHeader' >about</h1>
+            <h1 className='aboutMeHeader'id='about'>about</h1>
                 <img src={ headShot } className="img-aboutMe" alt="Headshot" />
             <p className='aboutMeText' >Hello there! I am Tamer, a web developer from Westchester, NY. I have a big passion for crafting new and exciting web experiences. I enjoy connecting both technology and creativity together to create something new and innovative. 
             <br />
@@ -13,6 +14,15 @@
             <br />
             <br />
             Feel free to browse my portfolio, check out my projects,  repositories and social handles below. Be sure to download my resume above for more professional information. Lastly, make sure to check out the contact page as well so we can embark on new projects together!</p>
+        <>
+        <Portfolio />
+        </>
+        <>
+        <Contact />
+        </>
+        <>
+        <Resume />
+        </>
         </div>
     );
 }

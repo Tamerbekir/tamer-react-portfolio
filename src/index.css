@@ -15,8 +15,17 @@ body {
   font-family: 'Maven Pro';
   margin: 0;
   place-items: center;
-  min-width: 320px;
+  min-width: 100px;
   min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+main {
+  padding-top: 100px;
 }
 
 h1 { 
@@ -27,70 +36,61 @@ h1 {
 }
 
 
-/* Styling for header */
+/* Ensure the header is fixed at the top and overlaps the page content */
 .header {
-  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is on top of other elements */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   border-bottom: 2px solid #fbfeff34;
   font-size: 18px;
-  margin-bottom: 20px;
-  padding: 0px 15px;
-  border-radius: 40px;
-  margin-top: -1%;
+  padding: -10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Ensure there is enough padding at the top of the body to prevent content from being hidden behind the fixed header */
+body {
+  padding-top: 60px; /* Adjust this value based on the height of your header */
+}
 
-/* Styling for nav 'a' tag elements in header */
 .header nav a {
-  color: white;
+  color: #384764;
   margin: 0 10px;
-  padding: 10;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-
-/* Styling for nav element in header */
-.header nav {
-  display: flex;
-  justify-content:start;
-  align-items: center;
-  width: 100%;
-}
-
-/* Color for active link is light blue and bold */
 .header nav a.active {
-  color: #384764; 
+  color: #384764;
   font-weight: bold;
   font-size: 22px;
 }
 
 .header nav a:hover {
-  color: #384764; 
+  color: #384764;
   font-weight: bold;
-  box-shadow: 0 2px 0 0;  
-  transition: all .8s;
+  box-shadow: 0 2px 0 0;
+  transition: all 0.8s;
 }
 
-/* Name styling */
-.navName {
-  list-style: none;
-  margin-right: auto; 
-  font-weight: bold;
-  font-size: 30px;
-}
-
-/* styling when user hoves over links */
-.navName li a:hover {
-  color: #384764; 
-  font-weight: bold;
-} 
-
-/* Styling for list item (name) 'a' tag elements */
 .navName li a {
   font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  color: #384764;
 }
-/* Styling for list item (name) 'li' tag elements */
+
+.navName {
+  list-style: none;
+  margin-right: auto;
+  padding: 0;
+}
+
 .navName li {
-  margin-top: 8%;
+  display: inline;
 }
+
 
 /* contact information for the user to enter  */
 #contactInputName, 
@@ -250,6 +250,10 @@ footer a:hover {
   margin: 3%;
 }
 
+.portfolioHeader {
+  margin-top: 20%;
+}
+
 .contactText {
   color: #2a3853; 
   font-size: 17px;
@@ -259,55 +263,69 @@ footer a:hover {
   height: 50%;
 }
 
-.messageText {
-  max-width: 40%;
-  margin-left: 30%;
+
+
+h2 {
+  color: #2a3853; 
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /* Styling for various screen sizes and what elements change for the different sizes*/
+/* Styling for various screen sizes and what elements change for the different sizes */
 @media (max-width: 768px) {
+
+
+  nav {
+    padding: 10px;
+  }
+
   .header nav {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 40px;
+    justify-content: center;
+
+    /* padding-bottom: 40px; */
+  }
+
+  .navName {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+
+  .navName li {
+    display: block; /* Ensure list items are block-level elements */
+    margin-bottom: 10px; /* Add some space between items */
+    
   }
 
   #contactInputName,
   #contactInputEmail {
     margin: auto;
     width: 30%;
-    /* min-width: 10%; */
-  }
-
-
-  .aboutMeText {
-    font-size: 11px;
-    /* font-weight: bold; */
   }
 
   .card-group {
     margin-left: 0%;
     max-width: 100%;
-    transition: box-shadow 0.3s ease-in-out; 
+    transition: box-shadow 0.3s ease-in-out;
   }
 
   .img-aboutMe {
     max-width: 25%;
   }
 
+
   footer li {
     margin: auto;
     margin-right: 8%;
     align-items: center;
   }
-
-
-  .navName {
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
-  }
-
 
   .header {
     font-size: 20px;
@@ -316,22 +334,20 @@ footer a:hover {
     margin-bottom: 10%;
   }
 
-  .navName {
-    font-size: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-bottom: 2%;
+  .messageText {
+    font-size: 10;
   }
+
+
   h1 {
     font-size: 30px;
   }
+
   p {
     font-size: 12px;
   }
-  .form-text {
-    font-size: 10px;
-  }
-}
 
+  /* .form-text {
+    font-size: 10px;
+  } */
+}
