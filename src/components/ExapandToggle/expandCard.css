@@ -1,0 +1,14 @@
+
+.card-button {
+  margin-top: 10px;
+}
+
+.card.expanded .card-body {
+  height: 350px;
+  display: block;
+}
+
+.card-body img {
+  width: 100%;
+}
+

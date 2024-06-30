@@ -10,8 +10,8 @@
 
 /* Styling for main body */
 body {
-  background: rgb(205,186,212);
-  background: radial-gradient(circle, rgb(223, 219, 224) 0%, rgb(198, 210, 224) 100%);
+  background: rgb(97, 92, 99);
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(198, 210, 224) 100%);
   font-family: 'Maven Pro';
   margin: 0;
   place-items: center;
@@ -89,16 +89,37 @@ body {
 }
 
 a {
+  font-size: 20px !important;
   font-weight: 500;
-  color: #384764; 
+  color: rgba(8, 28, 44, 0.856);
   text-decoration: inherit;
+  font-size: 20px;
+  
 }
+
+.card-link {
+  padding: 6px;
+  border-radius: 40px;
+  background-color: #384764;
+  font-weight: 500;
+  color: #fff6f6; 
+  text-decoration: inherit;
+  font-size: 14px;
+}
+
+.card-link:hover {
+  font-size: 15px;
+  font-weight: bold;
+  color: #e4e4e4;
+}
+
+
 
 a:hover {
   color: #384764; 
-  font-size: 17px;
+  font-size: 21px;
   font-weight: bold;
-  transition: all .8s;
+  color: #85a7eb;
 }
 
 /* styling for contact submit button */
@@ -147,32 +168,33 @@ footer a:hover {
 }
 
 .img-aboutMe {
+  margin-left: auto !important;
   max-width: 10%;
-  border-radius: 15%;
+  border-radius: 45% 45% 45%;
   border: solid 2px #7f5ee33a;
 }
 
-.portfolio {
-  margin: auto;
-  max-width: 70%;
+.card-title {
+  color: rgba(20, 74, 117, 0.856);
+  font-weight:bold;
 }
 
-
-.portfolioText {
-  color: #2a3853;  
-  font-size: 18px;
-}
-
-
-/* Card styling */
 .card {
+  /* height: 200px; */
   position: relative;
   overflow: hidden;
 }
 
 .card img {
+  height: 200px;
   transition: filter 0.5s ease-in-out;
 }
+
+.card-body {
+  padding: 0; /* Remove padding to eliminate gaps */
+  margin: 0; /* Remove any default margin */
+}
+
 
 .card:hover img {
   filter: blur(5px);
@@ -197,7 +219,7 @@ footer a:hover {
 .card {
   border-radius: 20px;
   border: solid rgba(38, 10, 148, 0.353) 2px;
-  box-shadow: 10px 10px 20px rgba(146, 215, 238, 0.32);
+  box-shadow: 10px 10px 20px rgba(52, 53, 54, 0.32);
 }
 
 .card:hover .card-button {
@@ -234,9 +256,6 @@ footer a:hover {
   margin: 3%;
 }
 
-.portfolioHeader {
-  margin-top: 20%;
-}
 
 .contactText {
   color: #2a3853; 
@@ -294,6 +313,7 @@ h2 {
     font-size: 10;
   }
 
+  
 
   h1 {
     font-size: 30px;
