@@ -5,15 +5,14 @@ import {
   FloatingLabel,
   emailjs,
   ToastContainer,
-  Bounce,
-  toast
+  toast,
+  Bounce
   } from './contact'
 
 import './contact.css'
 import 'react-toastify/dist/ReactToastify.css';
+import ReCAPTCHA from 'react-google-recaptcha';
 
-// setting up state for userData they type into form field/input value
-// strings are empty because a string should only populate for errors, in this case
 const Contact = () => {
   const [userData, setUserData] = useState({
     username: '',
@@ -21,16 +20,14 @@ const Contact = () => {
     message: ''
   });
 
-  //setting up state for error message user can receive
-  // string is empty unless user encounters an error
   const [error, setError] = useState({
     username: '',
     userEmail: '',
     message: ''
   });
 
-  // setting up onChange and taking in userData for when user enters info into form fields.
-   //for every change in this form field, this function will be called
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+
   const handleUserChange = (event) => {
     const { name, value } = event.target;
     setUserData({
@@ -39,11 +36,13 @@ const Contact = () => {
     });
   };
 
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaValue(value);
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    //if the user tries to send contact info and left field empty, user will get error for field that has error
-    // and error will be placed within the useState string if user does not meet criteria
     if (!userData.username || !userData.userEmail || !userData.message) {
       setError({
         username: !userData.username ? 'Please provide your name' : '',
@@ -52,7 +51,7 @@ const Contact = () => {
       });
       toast.error('Please fill out all fields.', {
         position: "top-left",
-        autoClose: 2000,
+        autoClose: 1500,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
@@ -61,7 +60,22 @@ const Contact = () => {
         theme: "light",
         transition: Bounce,
       });
-      return
+      return;
+    }
+
+    if (!recaptchaValue) {
+      toast.error('Please complete the reCAPTCHA.', {
+        position: "top-left",
+        autoClose: 1500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      return;
     }
 
     emailjs.sendForm(
@@ -72,10 +86,9 @@ const Contact = () => {
     )
     .then((result) => {
       console.log(result.text);
-      //bringing in Toastify package for success
       toast.success('Contact info sent successfully!', {
         position: "top-left",
-        autoClose: 3000,
+        autoClose: 1500,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
@@ -83,8 +96,7 @@ const Contact = () => {
         progress: undefined,
         theme: "light",
         transition: Bounce,
-      })
-      //if the users info is sent successfully, clear their information as well as any error message they may have encountered prior
+      });
       setUserData({
         username: '',
         userEmail: '',
@@ -94,13 +106,13 @@ const Contact = () => {
         username: '',
         userEmail: '',
         message: ''
-      })
+      });
+      setRecaptchaValue(null);
     }, (error) => {
       console.log(error.text);
-      //bringing in Toastify package for error
-      toast.error('There was an error sending your message. Please try again later', {
+      toast.error('There was an error sending your message. Please try again later.', {
         position: "top-left",
-        autoClose: 5000,
+        autoClose: 1500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -108,8 +120,8 @@ const Contact = () => {
         progress: undefined,
         theme: "light",
         transition: Bounce,
-        });   
       });
+    });
   };
 
   return (
@@ -119,23 +131,23 @@ const Contact = () => {
         <br />
         <Form.Text className='messageName'></Form.Text>
         <FloatingLabel label="Your name" >
-        <Form.Control
-          className='nameInput'
-          type="text"
-          name="username"
-          value={userData.username}
-          onChange={handleUserChange}
-        />
+          <Form.Control
+            className='nameInput'
+            type="text"
+            name="username"
+            value={userData.username}
+            onChange={handleUserChange}
+          />
         </FloatingLabel>
         <p style={{ color: '#F56742' }}>{error.username}</p>
         <Form.Text className='messageEmail'></Form.Text>
         <FloatingLabel label="Your email">
-        <Form.Control 
-          type="email"
-          name="userEmail"
-          value={userData.userEmail}
-          onChange={handleUserChange}
-        />
+          <Form.Control 
+            type="email"
+            name="userEmail"
+            value={userData.userEmail}
+            onChange={handleUserChange}
+          />
         </FloatingLabel>
         <p style={{ color: '#F56742' }}>{error.userEmail}</p>
         <Form.Text className='messageText'></Form.Text>
@@ -150,6 +162,11 @@ const Contact = () => {
           />
         </FloatingLabel>
         <p style={{ color: '#F56742' }}>{error.message}</p>
+        <ReCAPTCHA
+          className='recaptchaContainer'
+          sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+          onChange={handleRecaptchaChange}
+        />
         <br />
         <Button type="submit" size="sm">
           Contact me
