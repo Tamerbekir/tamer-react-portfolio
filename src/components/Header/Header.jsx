@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { FaHome, FaUser, FaFolderOpen, FaFileDownload } from 'react-icons/fa';
-import resume from '../../assets/futureresume.pdf';
+import resume from '../../assets/tamerBekirResume2024.pdf';
 import './header.css';
 
 const Header = () => {

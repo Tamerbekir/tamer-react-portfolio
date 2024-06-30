@@ -1,5 +1,5 @@
 // Exporting Resume function and JSX to be rendered
-import resumeFile from '../../assets/futureresume.pdf'
+import resumeFile from '../../assets/tamerBekirResume2024.pdf'
 import { FaDownload } from "react-icons/fa";
 
 import './resume.css'
