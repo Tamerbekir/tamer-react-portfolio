@@ -1,13 +1,13 @@
 import {
   techBlogImg,
   weatherAppImg,
-  quizAppImg,
   ecommerceBackEndimg,
   sqlEmployeeTrackerimg,
   noSqlSocialApiImg,
   instructifyImg,
   activeEatsImg,
-  pennyWiseImg
+  pennyWiseImg,
+  liveFitImg
 } from '../';
 
 import ExpandCard from '../ExapandToggle/ExpandToggle'
@@ -38,11 +38,11 @@ const Portfolio = () => {
           repoLink="https://github.com/Tamerbekir/tamer-mets-quiz"
         />
         <ExpandCard
-          imgSrc={quizAppImg}
-          title="Mets Code Quiz"
-          text="This application uses HTML5, CSS and Javascript."
-          link="https://tamerbekir.github.io/tamer-mets-quiz/"
-          repoLink="https://github.com/Tamerbekir/tamer-mets-quiz"
+          imgSrc={liveFitImg}
+          title="Live Fit"
+          text="Full release late 2025. This application uses MERN (MongoDb, Express, React and Node). LiveFit is a mobile app only designed for users to interact with users and log a wide variety of workouts."
+          link="https://fitness-blog-za4t.onrender.com/"
+          repoLink="https://github.com/Tamerbekir/fitness-blog"
         />
       </div>
       <h3>Team Projects</h3>
